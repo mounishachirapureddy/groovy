@@ -236,3 +236,8 @@ reader.close()
 //when working with binary files and read content as bytes
 byte[] contents=myFile.bytes
 println contents
+println myFile.length() // to print the length of file in bytes
+myFile.isFile()// to check whether it is  a file
+myFile.isDirectory()// to check whether it is adirectory 
+
+
