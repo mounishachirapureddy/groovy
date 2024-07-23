@@ -239,5 +239,85 @@ println contents
 println myFile.length() // to print the length of file in bytes
 myFile.isFile()// to check whether it is  a file
 myFile.isDirectory()// to check whether it is adirectory 
+myFile.isHidden()// to check whether it is hidden or not
+=======================================================
+**how to write files in groovy**
+File myFile= new File ("data1.txt")
+myFile.write("this is line1")
+myFile<<"this is line2"
+print myFile.text
+myFile.text="this is 3 line"[--- this lines replaces the above two lines]
 
 
+//[--- this lines replaces the above two lines]
+myFile.withWriter{ writer ->
+    writer.withLine("this is line4")
+    }
+    print myFile.text
+
+
+myFile.append("\nthis is line5")
+
+myFile.length()--->gives the length in bytes
+===============================================================
+**OOPS**
+class car
+{
+ String name;
+ String colour;
+ def getCarName("carName")
+ {
+ carName=name;
+ }
+ def getCarColour("carColour")
+ {
+ carColour=colour;
+ }
+  def setCarName()
+ {
+ println "name $name"
+ }
+  def setCarColour()
+  {
+  println "colour $colour"
+  }
+    string  void main (args)
+    {
+    car Ford = new car();
+     Ford.getCarName("ford");
+     Ford.getCarColour("red");
+     Ford.setCarName();
+     Ford.setCarColour();
+    }
+    =========================
+    OOP | Inheritance
+Process where one class acquires properties(methods and fields) from another class
+
+parent  child
+super sub
+base derived
+=====================
+ABSTRACT CLASS
+-- contains both abstarct and normal methods
+=============
+INTERFACE
+=====================
+REGULAR EXPRESSION/REGEX
+patterns that are used find the sub strings in a text
+~"expression"
+
+https://regexr.com/
+http://buildregex.com/
+
+def regex=/(?:[^groovy]*)/
+def match="this is groovy" =~ regex
+if(match)
+{
+def i= 0
+whilw (match){
+println match[i]
+i++
+}
+else{
+println "not matched"
+}
